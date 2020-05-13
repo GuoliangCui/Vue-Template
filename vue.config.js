@@ -14,19 +14,19 @@ module.exports = {
   devServer: {
     host: "localhost",
     port: 8080,
-    open: true //自动打开浏览器
-    // https:false,
-    // hotOnly:false,
-    // proxy: {
-    //     '/api': {
-    //         target: 'http://localhost:5000',
-    //         // changeOrigin:true,
-    //         secure: false,
-    //         pathRewrite: {
-    //             '^/api': '',
-    //         }
-    //     }
-    // }
+    open: true, //自动打开浏览器
+    https:false,
+    hotOnly:false,
+    proxy: {
+        '/api': {
+            target: 'http://localhost:5000',
+            // changeOrigin:true,
+            secure: false,
+            pathRewrite: {
+                '^/api': '',
+            }
+        }
+    }
   },
   chainWebpack: config => {
     config.resolve.alias
